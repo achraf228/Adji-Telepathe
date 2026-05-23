@@ -12,6 +12,7 @@ const GaleriePage     = lazy(() => import('@/pages/GaleriePage'))
 const ActualitesPage  = lazy(() => import('@/pages/ActualitesPage'))
 const EvenementsPage  = lazy(() => import('@/pages/EvenementsPage'))
 const PressePage      = lazy(() => import('@/pages/PressePage'))
+const MarketplacePage = lazy(() => import('@/pages/MarketplacePage'))
 const ContactPage     = lazy(() => import('@/pages/ContactPage'))
 const NotFoundPage    = lazy(() => import('@/pages/NotFoundPage'))
 
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="actualites" element={<ActualitesPage />} />
           <Route path="evenements" element={<EvenementsPage />} />
           <Route path="presse" element={<PressePage />} />
+          <Route path="marketplace" element={<MarketplacePage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

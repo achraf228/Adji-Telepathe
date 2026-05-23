@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { key: 'news', path: '/actualites' },
   { key: 'events', path: '/evenements' },
   { key: 'press', path: '/presse' },
+  { key: 'marketplace', path: '/marketplace' },
   { key: 'contact', path: '/contact' },
 ]
 

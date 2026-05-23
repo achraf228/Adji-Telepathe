@@ -14,6 +14,7 @@ const resources = {
         news: 'Actualités',
         events: 'Événements',
         press: 'Presse',
+        marketplace: 'Boutique',
         contact: 'Contact',
       },
       home: {
@@ -97,6 +98,20 @@ const resources = {
         whatsapp: 'WhatsApp Booking',
         booking: 'Booking & Management',
       },
+      marketplace: {
+        title: 'Boutique',
+        description: 'Découvrez et achetez les albums officiels d\'Adji Télépathe et sa collection de merchandise exclusive.',
+        albums: 'Albums',
+        albumsDescription: 'Les albums d\'Adji Télépathe en version numérique et physique',
+        merchandise: 'Merchandise',
+        merchandiseDescription: 'Vêtements, accessoires et articles officiels',
+        tracks: 'titres',
+        buy: 'Acheter',
+        colors: 'Couleurs disponibles',
+      },
+      meta: {
+        marketplace: 'Boutique officielle d\'Adji Télépathe',
+      },
       footer: {
         rights: 'Tous droits réservés',
         made: 'Site officiel',
@@ -114,6 +129,7 @@ const resources = {
         news: 'News',
         events: 'Events',
         press: 'Press',
+        marketplace: 'Store',
         contact: 'Contact',
       },
       home: {
@@ -196,6 +212,20 @@ const resources = {
         error: 'Error sending message. Try again.',
         whatsapp: 'WhatsApp Booking',
         booking: 'Booking & Management',
+      marketplace: {
+        title: 'Store',
+        description: 'Discover and buy official albums from Adji Télépathe and his exclusive merchandise collection.',
+        albums: 'Albums',
+        albumsDescription: 'Adji Télépathe albums in digital and physical format',
+        merchandise: 'Merchandise',
+        merchandiseDescription: 'Official clothing, accessories and items',
+        tracks: 'tracks',
+        buy: 'Buy',
+        colors: 'Available colors',
+      },
+      meta: {
+        marketplace: 'Official store of Adji Télépathe',
+      },
       },
       footer: {
         rights: 'All rights reserved',
