@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import toast from 'react-hot-toast'
 import SEOHead from '@/components/ui/SEOHead'
-import { AnimatedSection, GoldButton } from '@/components/ui'
+import { AnimatedSection, CyanButton } from '@/components/ui'
 import { contactAPI } from '@/lib/api'
 
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY || ''
@@ -43,7 +43,7 @@ export default function ContactPage() {
     }
   }
 
-  const inputClass = `w-full bg-dark-200 border border-dark-400 focus:border-gold outline-none px-5 py-3.5 font-body text-sm text-white placeholder:text-white/25 transition-colors`
+  const inputClass = `w-full bg-dark-200 border border-dark-400 focus:border-cyan outline-none px-5 py-3.5 font-body text-sm text-white placeholder:text-white/25 transition-colors`
 
   return (
     <>
@@ -63,14 +63,14 @@ export default function ContactPage() {
             <AnimatedSection className="lg:col-span-2">
               <div className="space-y-10">
                 <div>
-                  <h3 className="font-mono text-xs tracking-widest text-gold uppercase mb-4">{t('contact.booking')}</h3>
+                  <h3 className="font-mono text-xs tracking-widest text-cyan uppercase mb-4">{t('contact.booking')}</h3>
                   <div className="space-y-3 text-sm font-body text-white/60">
                     <p>booking@adjitelepathe.com</p>
-                    <a
+                    <a 
                       href="https://wa.me/XXXXXXXXXX"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gold/70 hover:text-gold transition-colors"
+                      className="flex items-center gap-2 text-cyan/70 hover:text-cyan transition-colors"
                     >
                       <span>●</span> WhatsApp
                     </a>
@@ -78,10 +78,10 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <h3 className="font-mono text-xs tracking-widest text-gold uppercase mb-4">Réseaux Sociaux</h3>
+                  <h3 className="font-mono text-xs tracking-widest text-cyan uppercase mb-4">Réseaux Sociaux</h3>
                   <div className="flex flex-col gap-3">
                     {['Instagram', 'Facebook', 'TikTok', 'YouTube', 'Spotify'].map(s => (
-                      <a key={s} href="#" className="font-body text-sm text-white/50 hover:text-gold transition-colors">
+                      <a key={s} href="#" className="font-body text-sm text-white/50 hover:text-cyan transition-colors">
                         {s} →
                       </a>
                     ))}
@@ -111,9 +111,9 @@ export default function ContactPage() {
                   <p className="font-mono text-xs text-white/20">
                     Protégé par reCAPTCHA v3
                   </p>
-                  <GoldButton onClick={handleSubmit} className={loading ? 'opacity-50 cursor-not-allowed' : ''}>
+                  <CyanButton onClick={handleSubmit} className={loading ? 'opacity-50 cursor-not-allowed' : ''}>
                     {loading ? '...' : t('contact.send')}
-                  </GoldButton>
+                  </CyanButton>
                 </div>
               </form>
             </AnimatedSection>

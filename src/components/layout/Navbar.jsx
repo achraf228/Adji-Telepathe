@@ -29,6 +29,14 @@ export default function Navbar() {
 
   useEffect(() => setMenuOpen(false), [location])
 
+  const handleLinkClick = (path) => {
+    // Si on est déjà sur la page, on remonte en haut
+    if (location.pathname === path) {
+      window.scrollTo(0, 0)
+      setMenuOpen(false)
+    }
+  }
+
   const toggleLang = () => i18n.changeLanguage(i18n.language === 'fr' ? 'en' : 'fr')
   const opaqueHeader = scrolled || location.pathname !== '/'
 
@@ -40,7 +48,11 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <Link to="/" className="font-display text-xl font-bold tracking-wide">
+        <Link 
+          to="/" 
+          onClick={() => handleLinkClick('/')}
+          className="font-display text-xl font-bold tracking-wide"
+        >
           <span className="text-gradient">Adji Télépathe</span>
         </Link>
 
@@ -50,7 +62,8 @@ export default function Navbar() {
             <Link
               key={key}
               to={path}
-              className={`nav-link ${location.pathname === path ? 'text-gold after:w-full' : ''}`}
+              onClick={() => handleLinkClick(path)}
+              className={`nav-link ${location.pathname === path ? 'text-cyan after:w-full' : ''}`}
             >
               {t(`nav.${key}`)}
             </Link>
@@ -61,7 +74,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <button
             onClick={toggleLang}
-            className="font-mono text-xs tracking-widest text-white/60 hover:text-gold transition-colors border border-dark-400 hover:border-gold px-3 py-1.5"
+            className="font-mono text-xs tracking-widest text-white/60 hover:text-cyan transition-colors border border-dark-400 hover:border-cyan px-3 py-1.5"
           >
             {i18n.language === 'fr' ? 'EN' : 'FR'}
           </button>
@@ -90,8 +103,9 @@ export default function Navbar() {
             <Link
               key={key}
               to={path}
+              onClick={() => handleLinkClick(path)}
               className={`font-body text-sm tracking-wider uppercase ${
-                location.pathname === path ? 'text-gold' : 'text-white/70'
+                location.pathname === path ? 'text-cyan' : 'text-white/70'
               }`}
             >
               {t(`nav.${key}`)}

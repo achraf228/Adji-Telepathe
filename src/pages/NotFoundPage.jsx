@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { GoldButton } from '@/components/ui'
+import { CyanButton } from '@/components/ui'
 
 export default function NotFoundPage() {
   return (
@@ -10,7 +10,7 @@ export default function NotFoundPage() {
         </div>
         <h1 className="font-display text-3xl font-bold text-white mb-4">Page introuvable</h1>
         <p className="font-body text-white/50 mb-8">Cette page n'existe pas ou a été déplacée.</p>
-        <GoldButton href="/">← Retour à l'accueil</GoldButton>
+        <CyanButton href="/">← Retour à l'accueil</CyanButton>
       </div>
     </div>
   )

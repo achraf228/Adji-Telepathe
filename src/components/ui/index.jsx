@@ -9,28 +9,28 @@ export function SectionHeader({ sub, title, light = false }) {
       className={`mb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
     >
       <p className="section-subtitle">{sub}</p>
-      <h2 className={`section-title ${light ? 'text-dark' : 'text-white'}`}>{title}</h2>
-      <div className="gold-line" />
+      <h2 className={`section-title ${light ? 'text-dark' : 'text-white'}`}>{title}</h2> 
+      <div className="cyan-line" />
     </div>
   )
 }
 
-// ─── Gold Button ──────────────────────────────────────────────
-export function GoldButton({ children, onClick, href, external = false, className = '' }) {
+// ─── Cyan Button ──────────────────────────────────────────────
+export function CyanButton({ children, onClick, href, external = false, className = '' }) {
   if (href) {
     return (
       <a
         href={href}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
-        className={`btn-gold ${className}`}
+        className={`btn-cyan ${className}`}
       >
         {children}
       </a>
     )
   }
   return (
-    <button onClick={onClick} className={`btn-gold ${className}`}>
+    <button onClick={onClick} className={`btn-cyan ${className}`}>
       {children}
     </button>
   )
@@ -88,7 +88,7 @@ export function SocialLink({ href, label, children }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="w-10 h-10 border border-dark-400 hover:border-gold flex items-center justify-center text-white/50 hover:text-gold transition-all duration-300"
+      className="w-10 h-10 border border-dark-400 hover:border-cyan flex items-center justify-center text-white/50 hover:text-cyan transition-all duration-300"
     >
       {children}
     </a>

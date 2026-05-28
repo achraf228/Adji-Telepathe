@@ -18,7 +18,7 @@ export default function MarketplacePage() {
           {/* Page Header */}
           <div className="mb-16">
             <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              <span className="text-gradient">{t('nav.marketplace')}</span>
+              <span className="text-gradient">{t('nav.marketplace')}</span> 
             </h1>
             <p className="text-white/60 text-lg max-w-2xl">
               {t('marketplace.description')}

@@ -45,9 +45,9 @@ export default function GaleriePage() {
                 key={cat}
                 onClick={() => setCategory(cat)}
                 className={`px-6 py-2 font-mono text-xs tracking-widest uppercase transition-all ${
-                  category === cat
-                    ? 'bg-gold text-dark'
-                    : 'border border-dark-400 text-white/50 hover:border-gold hover:text-gold'
+                  category === cat 
+                    ? 'bg-cyan text-dark'
+                    : 'border border-dark-400 text-white/50 hover:border-cyan hover:text-cyan'
                 }`}
               >
                 {t(`gallery.${cat}`)}

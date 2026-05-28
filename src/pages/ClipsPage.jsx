@@ -36,8 +36,8 @@ function VideoCard({ video }) {
               />
               <div className="absolute inset-0 bg-dark/50 flex items-center justify-center">
                 <button
-                  onClick={() => setPlaying(true)}
-                  className="w-16 h-16 bg-gold rounded-full flex items-center justify-center hover:bg-gold-light transition-colors"
+                  onClick={() => setPlaying(true)} 
+                  className="w-16 h-16 bg-cyan rounded-full flex items-center justify-center hover:bg-cyan-300 transition-colors"
                 >
                   <span className="text-dark text-xl ml-1">▶</span>
                 </button>

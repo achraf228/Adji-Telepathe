@@ -1,5 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
-import { Suspense, lazy } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { Suspense, lazy, useEffect } from 'react'
 
 import Layout from '@/components/layout/Layout'
 
@@ -18,13 +18,19 @@ const NotFoundPage    = lazy(() => import('@/pages/NotFoundPage'))
 
 function PageLoader() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-8 h-8 border border-gold border-t-transparent rounded-full animate-spin" />
+    <div className="min-h-screen flex items-center justify-center"> 
+      <div className="w-8 h-8 border border-cyan border-t-transparent rounded-full animate-spin" />
     </div>
   )
 }
 
 export default function App() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <Suspense fallback={<PageLoader />}>
       <Routes>

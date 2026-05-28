@@ -13,10 +13,10 @@ function ArticleCard({ article }) {
         <div className="aspect-video bg-dark-300 overflow-hidden relative">
           {article.image ? (
             <img src={article.image} alt={article.titre} loading="lazy"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /> 
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-4xl text-gold/10">♪</span>
+              <span className="font-display text-4xl text-cyan/10">♪</span>
             </div>
           )}
         </div>
@@ -24,17 +24,17 @@ function ArticleCard({ article }) {
           {article.tags && (
             <div className="flex gap-2 flex-wrap mb-3">
               {article.tags.split(',').map(tag => (
-                <span key={tag} className="font-mono text-[10px] tracking-widest text-gold uppercase">{tag.trim()}</span>
+                <span key={tag} className="font-mono text-[10px] tracking-widest text-cyan uppercase">{tag.trim()}</span>
               ))}
             </div>
-          )}
-          <h2 className="font-display text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors line-clamp-2">
+          )} 
+          <h2 className="font-display text-xl font-bold text-white mb-2 group-hover:text-cyan transition-colors line-clamp-2">
             {article.titre}
           </h2>
           <p className="font-mono text-xs text-white/40 mb-4">
             {new Date(article.date_publication).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
-          <span className="font-mono text-xs tracking-widest text-gold uppercase">{t('news.read_more')} →</span>
+          <span className="font-mono text-xs tracking-widest text-cyan uppercase">{t('news.read_more')} →</span>
         </div>
       </Link>
     </AnimatedSection>

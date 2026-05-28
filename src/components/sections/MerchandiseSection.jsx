@@ -59,17 +59,17 @@ export default function MerchandiseSection() {
     <section>
       <div className="mb-12">
         <h2 className="text-3xl font-display font-bold mb-2 flex items-center gap-3">
-          <Package className="w-8 h-8 text-gold" />
+          <Package className="w-8 h-8 text-cyan" />
           {t('marketplace.merchandise')}
         </h2>
         <p className="text-white/60">{t('marketplace.merchandiseDescription')}</p>
       </div>
-
+ 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {merchandise.map((item) => (
           <div
             key={item.id}
-            className="group bg-dark-400/50 border border-dark-300 hover:border-gold transition-all duration-300 overflow-hidden hover:shadow-lg hover:shadow-gold/20"
+            className="group bg-dark-400/50 border border-dark-300 hover:border-cyan transition-all duration-300 overflow-hidden hover:shadow-lg hover:shadow-cyan/20"
           >
             {/* Product Image */}
             <div className="relative overflow-hidden bg-dark-300 aspect-square">
@@ -81,7 +81,7 @@ export default function MerchandiseSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Category Badge */}
-              <div className="absolute top-4 right-4 bg-gold text-dark px-3 py-1 text-xs font-semibold rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute top-4 right-4 bg-cyan text-dark px-3 py-1 text-xs font-semibold rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {item.category}
               </div>
             </div>
@@ -107,8 +107,8 @@ export default function MerchandiseSection() {
 
               {/* Price and Button */}
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-bold text-gold">{item.price} FCFA</span>
-                <button className="bg-gold text-dark px-4 py-2 hover:bg-gold/80 transition-colors flex items-center gap-2 font-semibold">
+                <span className="text-2xl font-bold text-cyan">{item.price} FCFA</span>
+                <button className="bg-cyan text-dark px-4 py-2 hover:bg-cyan/80 transition-colors flex items-center gap-2 font-semibold">
                   <ShoppingCart className="w-4 h-4" />
                   {t('marketplace.buy')}
                 </button>

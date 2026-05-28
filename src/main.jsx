@@ -17,8 +17,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           toastOptions={{
             style: {
               background: '#1A1A1A',
-              color: '#E8C97A',
-              border: '1px solid #C9A84C33',
+              color: '#7DD3FC',
+              border: '1px solid #22D3EE33',
               fontFamily: '"DM Sans", sans-serif',
             }
           }}

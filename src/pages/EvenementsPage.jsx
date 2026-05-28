@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import SEOHead from '@/components/ui/SEOHead'
-import { AnimatedSection, Skeleton, GoldButton } from '@/components/ui'
+import { AnimatedSection, Skeleton, CyanButton } from '@/components/ui'
 import { eventsAPI } from '@/lib/api'
 
 function EventCard({ event, featured = false }) {
@@ -11,7 +11,7 @@ function EventCard({ event, featured = false }) {
 
   return (
     <AnimatedSection>
-      <div className={`card-dark p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start ${featured ? 'border-gold/50' : ''}`}>
+      <div className={`card-dark p-6 md:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start ${featured ? 'border-cyan/50' : ''}`}>
         {/* Date block */}
         <div className="shrink-0 text-center md:text-left">
           <div className="font-display text-5xl font-black text-gradient leading-none">
@@ -27,8 +27,8 @@ function EventCard({ event, featured = false }) {
         {/* Info */}
         <div className="flex-1">
           {featured && (
-            <span className="font-mono text-xs tracking-widest text-gold uppercase mb-2 block">
-              {t('events.next_concert')}
+            <span className="font-mono text-xs tracking-widest text-cyan uppercase mb-2 block">
+              {t('events.next_concert')} 
             </span>
           )}
           <h3 className="font-display text-2xl font-bold text-white mb-2">{event.titre}</h3>
@@ -45,8 +45,8 @@ function EventCard({ event, featured = false }) {
             <span className="font-mono text-xs tracking-widest text-white/20 uppercase border border-dark-400 px-4 py-2">
               Passé
             </span>
-          ) : (
-            <GoldButton href="#">{t('events.reserve')}</GoldButton>
+          ) : ( 
+            <CyanButton href="#">{t('events.reserve')}</CyanButton>
           )}
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function EvenementsPage() {
                 key={t_}
                 onClick={() => setTab(t_)}
                 className={`px-8 py-4 font-mono text-xs tracking-widest uppercase transition-all ${
-                  tab === t_ ? 'border-b-2 border-gold text-gold' : 'text-white/40 hover:text-white'
+                  tab === t_ ? 'border-b-2 border-cyan text-cyan' : 'text-white/40 hover:text-white'
                 }`}
               >
                 {t(`events.${t_}`)}

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import SEOHead from '@/components/ui/SEOHead'
-import { SectionHeader, AnimatedSection, Skeleton, GoldButton } from '@/components/ui'
+import { SectionHeader, AnimatedSection, Skeleton, CyanButton } from '@/components/ui'
 import { musicAPI } from '@/lib/api'
 
 function MusicCard({ item }) {
@@ -19,17 +19,17 @@ function MusicCard({ item }) {
             />
           ) : (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-5xl text-gold/20">♪</span>
+              <span className="font-display text-5xl text-cyan/20">♪</span>
             </div>
           )}
           <div className="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
             {item.spotify_url && (
               <a href={item.spotify_url} target="_blank" rel="noopener noreferrer"
-                className="bg-transparent border border-gold text-gold hover:bg-[#1DB954] hover:border-[#1DB954] hover:text-white transition-all duration-300 text-xs px-4 py-2 rounded font-semibold uppercase tracking-wider">
+                className="bg-transparent border border-cyan text-cyan hover:bg-[#1DB954] hover:border-[#1DB954] hover:text-white transition-all duration-300 text-xs px-4 py-2 rounded font-semibold uppercase tracking-wider">
                 Spotify
               </a>
             )}
-            {item.youtube_url && (
+            {item.youtube_url && ( 
               <a href={item.youtube_url} target="_blank" rel="noopener noreferrer"
                 className="btn-outline text-xs px-4 py-2">
                 YouTube
@@ -87,7 +87,7 @@ export default function DiscographiePage() {
                 key={t_}
                 onClick={() => setTab(t_)}
                 className={`px-8 py-4 font-mono text-xs tracking-widest uppercase transition-all ${
-                  tab === t_ ? 'border-b-2 border-gold text-gold' : 'text-white/40 hover:text-white'
+                  tab === t_ ? 'border-b-2 border-cyan text-cyan' : 'text-white/40 hover:text-white'
                 }`}
               >
                 {t(`music.${t_}`)}
